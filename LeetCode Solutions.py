@@ -59,3 +59,9 @@ class Solution():
             return [nums]
         else:
             return [[i] + j for i in nums for j in self.permute([x for x in nums if x != i])]
+
+    def hammingWeight(self, n: int) -> int:
+        '''Write a function that takes an unsigned integer and return the number of '1' bits 
+        it has (also known as the Hamming weight).'''
+        return bin(n).count('1')
+
